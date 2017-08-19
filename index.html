@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<div class="row yoyo">
+    <div class="col"></div>
+    <div class="col"><h1 align="center">Simple expense manager project</h1>
+        <h2 align="center">Add a new item:</h2></div>
+    <div class="col"></div>
+</div>
+
+<div class="container-fluid">
+
+
+   <br>
+<div class="row">
+
+    <div class="col-sm-4">
+        <br>
+  <table class="table table-bordered" >
+      <thead>
+      <tr>
+          <th> Category</th>
+          <th>Limit</th>
+          <th>Amount left</th>
+          <th>Spend(%)</th>
+      </tr>
+<tbody id="table">
+
+  </tbody>
+      </thead>
+  </table>
+    </div>
+
+    <div class="col-sm-4">
+    <div id="form-box">
+        <form >
+
+            <div>
+                <span>Type:</span>
+                <select name="type">
+                    <option value="card">Card</option>
+                    <option value="cash">Cash</option>
+                    <option value="cryptocoin">Cryptocoin</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="col">
+                <div>
+
+
+                    <span>Category:</span> <input type="text" name="item-name" placeholder="What did you spend on?" id="name"></div>
+            </div>
+
+            <div>
+                <span>Expense</span> <input type="text" name="date" id="date" placeholder="Eg clubbing  ">
+            </div>
+
+            <div>
+                <span>Amount:</span> <input type="number" name="amount" placeholder="How much?" id="amount">
+            </div>
+        </form>
+
+        <input type="button" id="button" class="btn btn-success" value="Add New Expense">
+    </div></div>
+<div class="col-sm-3">
+    <br><br>
+    <div class="category" style="align-self: auto">
+        <div>
+            <span>Category</span> <input type="text" name="date" id="cat" placeholder="Eg clubbing  ">
+        </div>
+
+        <div>
+            <span>Amount</span> <input type="number" name="amount" placeholder="How much?" id="new1">
+        </div>
+&nbsp&nbsp
+        <input type="button" id="add" value="Add New Category" class="btn btn-info">
+    </div>
+</div>
+</div>
+</div>
+
+
+<script src="logic.js"></script>
+</body>
+</html>

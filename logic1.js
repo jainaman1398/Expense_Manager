@@ -6,9 +6,10 @@ let cat=$("#cat");
 let new1=$("#new1");
 let add=$("#add");
 let index=4;
+let list=$("#list")
 let expense=[];
 let payment={};
-let list=$("#list");
+
 
 expense[0]={
     Title:'Food',
@@ -93,8 +94,17 @@ $(function () {
         });
 
     })
-
-
+    $('#table').delegate('tr', 'click' , function(){
+        list.empty();
+        let r=$(this).index();
+        let rr=expense[r].Title;
+        let arr=payment[rr].Items;
+        console.log(arr);
+     //   alert("Card:" +payment[rr].Card +" Cash:" +payment[rr].Cash +" Other:" +payment[rr].Other +" Cryptocoin" +payment[rr].Cryptocoin);
+       list.append(`<li class="list-group-item">Card:" ${payment[rr].Card} " Cash:" ${payment[rr].Cash} " Other:" ${payment[rr].Other} " Cryptocoin" ${payment[rr].Cryptocoin}</li>`)
+        list.append(`<li class="list-group-item">${arr}
+        </li>`)
+    });
 });
 function table23() {
     table.empty();
@@ -105,8 +115,6 @@ function table23() {
         var t=(item.Limit);
         var yo=(t-item.Amount)*100;
         var z=yo/t;
-        let vihu=item.Title;
-        let zozo=payment.vihu.Items;
         console.log(item.Title);
         let y = ($(`<tr><th>${item.Title}</th><th>${item.Limit}</th><th>${item.Amount}</th><th>${z}</th></tr>`));
         if(z>=80)
@@ -114,6 +122,7 @@ function table23() {
             window.alert("Expense above 80% in particular Category");
             y.css('background-color','#ff0000');
         }
+
         table.append(y);
     })
 }
